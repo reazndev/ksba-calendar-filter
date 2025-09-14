@@ -28,10 +28,12 @@ jobs:
       - name: Run calendar filter
         run: python filter.py
 
-      - name: Commit filtered ICS
+      - name: Commit filtered ICS to gh-pages
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
-          git add docs/filtered.ics
+          git checkout gh-pages || git checkout -b gh-pages
+          cp docs/filtered.ics filtered.ics
+          git add filtered.ics
           git commit -m "Update filtered calendar" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
