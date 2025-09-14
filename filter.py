@@ -13,7 +13,7 @@ EXCLUDE_KEYWORDS = [
     "Sommerkonzert", "Konferenz", "Probe", "Freiwillig", "Open Stage", "Abschlussaustellung", "Kulturschiene", "Girls", "spenden", "Meisterschaft", "Orchester",
     "Film", "Wettbewerb", "BiG", "Studienreise", "gespräch", "Konzert", "studien", "Summer Camp", "Shanghai", "Festival", "Kath.", "Merch", "Blaue Lunte", "Matur",
     "Aulatalk", "Twistory", "theater", "finale", "SO", "Versammlung", "Chemielabortag", "Chagall", "Eltern", "schulNetz", "Uselütete", "EMS", "Beachvolley", "MSM",
-    "WMS", "Gymnasium",
+    "WMS", "Gymnasium","fchi","3.1","4.1","4.2","fchi",
     "G1a","G1b","G1c","G1d","G1e","G1f","G1g","G1h","G1i","G1j","G1k","G1l","G1m","G1n","G1o","G1p","G1q","G1r","G1s","G1t","G1u","G1v","G1w","G1x","G1y","G1z",
     "G2a","G2b","G2c","G2d","G2e","G2f","G2g","G2h","G2i","G2j","G2k","G2l","G2m","G2n","G2o","G2p","G2q","G2r","G2s","G2t","G2u","G2v","G2w","G2x","G2y","G2z",
     "G3a","G3b","G3c","G3d","G3e","G3f","G3g","G3h","G3i","G3j","G3k","G3l","G3m","G3n","G3o","G3p","G3q","G3r","G3s","G3t","G3u","G3v","G3w","G3x","G3y","G3z",
