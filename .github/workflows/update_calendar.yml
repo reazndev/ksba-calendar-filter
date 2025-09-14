@@ -1,13 +1,16 @@
 name: Update Filtered Calendar
 
+permissions:
+  contents: write
+
 on:
   schedule:
     # Run daily at 6:00 UTC
     - cron: "0 6 * * *"
-  workflow_dispatch: # allows manual run
+  workflow_dispatch: # allows manual trigger in Actions tab
 
 jobs:
-  build:
+  update-calendar:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +33,5 @@ jobs:
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           git add docs/filtered.ics
-          git commit -m "Update filtered calendar" || echo "No changes"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Update filtered calendar" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
