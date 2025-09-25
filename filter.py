@@ -1,10 +1,10 @@
 import requests
 from pathlib import Path
 
-SOURCE_URL = "https://www.schulnetz-ag.ch/ksba/cindex.php?longurl=2m0MVHQHDWmjafghWBrrRTcDRKHRLZJej0AhKR7Yt24eJ0pdAff8Zk4DZHsn80AA"
+SOURCE_URL = "[insert subscribed calendar URL here"
 
 # Always keep these
-ALWAYS_KEEP = ["I3a"]
+ALWAYS_KEEP = ["I3a"] # add any other classes you want to display here -> e.g italian classes or chinese
 
 # Keywords to exclude
 EXCLUDE_KEYWORDS = [
@@ -55,10 +55,10 @@ def main():
             f.write(ev + "\n")
         f.write("END:VCALENDAR\n")
 
-    print(f"✅ Total events in source: {len(events)}")
-    print(f"✅ Events after filtering: {len(kept_events)}")
-    print(f"⚠️ Events skipped: {skipped_count}")
-    print("👉 Titles kept:")
+    print(f"Total events in source: {len(events)}")
+    print(f"Events after filtering: {len(kept_events)}")
+    print(f"Events skipped: {skipped_count}")
+    print("Titles kept:")
     for ev in kept_events[:1000]:
         summary_line = [line for line in ev.splitlines() if line.startswith("SUMMARY:")]
         print("   -", summary_line[0][8:] if summary_line else "<no title>")
