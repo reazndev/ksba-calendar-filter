@@ -1,6 +1,6 @@
 # KSBA Calendar Filter
 
-Filter and download events from any KSBA (Kentucky School Boards Association) school calendar.
+Filter and download events from any KSBA school calendar.
 
 ## Instructions
 
